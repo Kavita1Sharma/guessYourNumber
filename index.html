@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Randon Number Game</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body onload="init()">
+    <div class="main">
+        <div class="container">
+            <div class="start_game_area" id="start_game_area">
+                <h3>Guess Random Number between 1 to 100</h3>
+                <div class="imgarea">
+                    <img src="images/bg.svg" alt="image">
+                </div>
+                <h5>Select your level</h5>
+                <div class="btn-area">
+                    <button onclick="easymode()">Easy Mode (10 attempts)</button>
+                    <button onclick="hardmode()">Hard Mode (5 attempts)</button>
+                </div>
+            </div>
+            <div class="game_start_now" id="game_start_now">
+                <h5>
+                    <span id="hint"></span>
+                </h5>
+                <button onclick="newgame()" id="newgamebtn">New Game</button>
+                    <input type="number" placeholder="Enter your guess number" id="userGussNum" onchange="onChangeHandler()">
+                <p>Number of remaining attempts <span id="attempts"></span></p>
+                <p>Number of previous guess <span id="uval"></span></p>
+            </div>
+            
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
